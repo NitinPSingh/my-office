@@ -86,7 +86,7 @@ body::before {
   align-items: center
 }
 
-/* Start Monitor */
+
 .cubic .monitor {
   width: 250px;
   height: 160px;
@@ -137,7 +137,7 @@ body::before {
   height: 90%;
   background-color: #26373F;
   border-radius: 0 0 5px 5px;
-  /*   border-bottom: 3px solid #1D2C34; */
+ 
   position: absolute;
   top: 30px;
   left: 2%;
@@ -145,7 +145,7 @@ body::before {
   z-index: 2;
 }
 
-/* Table legs - corner positioning */
+
 .cubic .leg {
   width: 30px;
   height: 200px;
@@ -162,7 +162,7 @@ body::before {
   right: 0;
 }
 
-/* Drawer shelves in middle */
+
 .cubic .drawer-shelf {
   position: absolute;
   width: 200px;
@@ -182,7 +182,7 @@ body::before {
   right: 25%;
 }
 
-/* Drawer rows - 3 rows each */
+
 .cubic .drawer-row {
   position: absolute;
   width: 90%;
@@ -206,7 +206,7 @@ body::before {
   top: 80px;
 }
 
-/* Drawer handles */
+
 .cubic .drawer-handle {
   position: absolute;
   width: 20px;
@@ -219,8 +219,8 @@ body::before {
   z-index: 4;
 }
 
-/* end top table */
-/* THE Lamp */
+
+
 
 
 .cubic .lamp {
@@ -244,7 +244,7 @@ body::before {
 }
 
 .cubic .lamp-top:after {
-  /*   box-shadow: 1px 1px 9px #E8CD30;  */
+ 
   content: " ";
   width: 30px;
   height: 30px;
@@ -254,7 +254,7 @@ body::before {
   top: 130%;
   left: 2.5%;
   border-radius: 50% 10% 10% 50%;
-  /*   border-left: 10px solid #FEF2CB; */
+ 
   transition: .2s;
   animation: lmp 5s infinite alternate;
 }
@@ -275,7 +275,7 @@ body::before {
 }
 
 
-/* lamp-bottom1 */
+
 .cubic .lamp-bottomA {
   width: 20px;
   height: 130px;
@@ -283,7 +283,7 @@ body::before {
   position: absolute;
   top: 50px;
   left: 0;
-  /*   box-shadow: 1px 1px 1px #333;  */
+ 
 
 }
 
@@ -298,7 +298,7 @@ body::before {
   left: 0;
   border-radius: 50%;
   border: 7px solid #23222E;
-  /*   box-shadow: -2px 2px 1px #333; */
+ 
 }
 
 .cubic .lamp-bottomA:before {
@@ -323,7 +323,7 @@ body::before {
   background-color: #23222E;
   position: absolute;
   top: 185px;
-  left: 3%;
+  left: 33%;
   border-radius: 5px 5px 0 0;
   border-top: 2px dotted #422234;
   z-index: 3;
@@ -337,7 +337,7 @@ body::before {
   top: 178px;
   left: 73%;
   border-radius: 50% 50% 10% 10%;
-  /*   border-bottom: 1px solid #999; */
+ 
   z-index: 3;
 }
 
@@ -345,10 +345,10 @@ body::before {
 
 
 
-/* Person sitting on chair */
+
 .person {
   z-index: 6;
-  /* Behind the chair backrest */
+ 
   left: 50%;
   transform: translateX(-50%);
   width: 250px;
@@ -363,7 +363,7 @@ body::before {
 
 }
 
-/* Head - positioned behind chair, much bigger and more visible */
+
 .person .head {
   flex-shrink: 0;
   width: 80px;
@@ -384,7 +384,7 @@ body::before {
   z-index: 8;
 }
 
-/* Hair */
+
 .person .head::before {
   content: "";
   position: absolute;
@@ -429,7 +429,7 @@ body::before {
 }
 
 
-/* Body/Torso - much larger and more visible */
+
 .person .body {
   position: relative;
 
@@ -479,10 +479,10 @@ body::before {
 
 }
 
-/* Shoulders - much wider to show from behind */
 
 
-/* Left arm - much bigger and extending from behind chair */
+
+
 .person .body .arm-left {
   position: absolute;
   width: 35px;
@@ -496,7 +496,7 @@ body::before {
   z-index: 3;
 }
 
-/* Right arm - much bigger and extending from behind chair */
+
 .person .body .arm-right {
   position: absolute;
   width: 35px;
@@ -521,7 +521,7 @@ body::before {
 
 }
 
-/* Right arm - much bigger and extending from behind chair */
+
 .person .body .arm-right::before {
   border-radius: 6px 6px 0px 0px;
   background-color: #4285f4;
@@ -531,7 +531,7 @@ body::before {
 
 }
 
-/* Left hand - much bigger */
+
 .person .hand-left {
   width: 20px;
   height: 20px;
@@ -542,7 +542,7 @@ body::before {
   z-index: 2;
 }
 
-/* Right hand - much bigger */
+
 .person .hand-right {
   width: 20px;
   height: 20px;
@@ -553,11 +553,11 @@ body::before {
   z-index: 2;
 }
 
-/* Legs - much bigger and longer */
 
 
 
-/* Feet - much bigger */
+
+
 .person .foot-left {
   width: 35px;
   height: 12px;
@@ -849,8 +849,13 @@ body::before {
   z-index: 1;
 }
 
+.monitor-container .Monitor .BlackMonitor {
+  animation: monitor-sleep 10s infinite ease-in-out;
+}
+
 .monitor-container-right .Monitor .BlackMonitor {
   transition: all 0.3s ease;
+  animation: none;
 }
 
 .monitor-container-right .Monitor:hover .BlackMonitor {
@@ -879,23 +884,21 @@ body::before {
 
 .Monitor .BlackMonitor {
   height: 90%;
-  width: 99%;
+  width: 100%;
   background-color: black;
   border: 2px solid white;
   border-radius: 5% 5% 0% 0%;
-  animation: monitor-sleep 10s infinite ease-in-out;
-  background-image: none !important;
 }
 
 .Monitor .BlackMonitor .MonitorContent {
   height: 90%;
   width: 80%;
-  /*     background-color: #333333; */
+ 
 }
 
 .MonitorBtn {
   display: flex;
-  height: 5%;
+  height: 10%;
   position: relative;
 }
 
@@ -996,7 +999,7 @@ body::before {
   z-index: -1;
 }
 
-/* Cork texture overlay */
+
 .green-board::after {
   content: '';
   position: absolute;
@@ -1110,7 +1113,7 @@ body::before {
   z-index: 2;
 }
 
-/* Drawer handle */
+
 .slide::before {
   content: "";
   width: 8px;
@@ -1122,7 +1125,7 @@ body::before {
   right: 10px;
 }
 
-/* Slide tracks */
+
 .slide-track {
   width: 60px;
   height: 10px;
@@ -1142,7 +1145,7 @@ body::before {
   margin-top: 30px;
 }
 
-/* Track handles (circular ends) */
+
 .slide-track::before,
 .slide-track::after {
   content: "";
@@ -1163,6 +1166,14 @@ body::before {
 }
 
 
+.slide:hover {
+  transform: translateX(10px);
+  transition: transform 0.3s ease;
+}
+
+.slide:not(:hover) {
+  transition: transform 0.3s ease;
+}
 
 .slide-partition {
   width: 100%;
@@ -1184,7 +1195,7 @@ body::before {
   align-items: flex-start;
 }
 
-/* Big transparent window */
+
 .big-window {
   width: 60%;
   height: 40vh;
@@ -1209,7 +1220,7 @@ body::before {
   right: 0;
   bottom: 0;
   background: 
-    /* Realistic sky gradient */
+   
     linear-gradient(to bottom,
       #4A90E2 0%,
       #7BB3F0 20%,
@@ -1218,11 +1229,11 @@ body::before {
       #E0F6FF 80%,
       #F0F8FF 100%
     ),
-    /* Subtle cloud-like patterns */
+   
     radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
     radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 30%),
-    /* Glass reflection effect */
+   
     linear-gradient(90deg, 
       rgba(255, 255, 255, 0.1) 0%, 
       rgba(255, 255, 255, 0.3) 50%, 
@@ -1241,7 +1252,7 @@ body::before {
 
 
 
-/* Clock positioned at top right */
+
 .wall-clock {
   position: absolute;
   top: 50px;
@@ -1249,7 +1260,7 @@ body::before {
   z-index: 10;
 }
 
-/* Updated clock styles */
+
 .clock {
   height: 100px;
   width: 100px;
@@ -1263,7 +1274,7 @@ body::before {
   z-index: 999;
 }
 
-/* Hour markers */
+
 .clock .top {
   position: absolute;
   width: 2px;
@@ -1304,7 +1315,7 @@ body::before {
   transform: translateY(-50%);
 }
 
-/* Center dot */
+
 .clock .center {
   height: 6px;
   width: 6px;
@@ -1317,7 +1328,7 @@ body::before {
   z-index: 10;
 }
 
-/* Hour hand */
+
 .clock .hour {
   width: 2px;
   height: 35px;
@@ -1331,7 +1342,7 @@ body::before {
   animation: hour-hand 43200s infinite linear;
 }
 
-/* Minute hand */
+
 .clock .minute {
   width: 1px;
   height: 45px;
@@ -1345,7 +1356,7 @@ body::before {
   animation: minute-hand 3600s infinite linear;
 }
 
-/* Second hand */
+
 .clock .second {
   width: 1px;
   height: 50px;
@@ -1359,7 +1370,7 @@ body::before {
   animation: second-hand 60s infinite linear;
 }
 
-/* Animations */
+
 @keyframes hour-hand {
   from { transform: translateX(-50%) translateY(-100%) rotate(45deg); }
   to { transform: translateX(-50%) translateY(-100%) rotate(405deg); }
@@ -1486,7 +1497,7 @@ body::before {
   display: none;
 }
 
-/* Subtle reflection effects */
+
 .glass-window::after,
 .glass-door::after {
   content: '';
@@ -1515,7 +1526,7 @@ body::before {
   pointer-events: none;
 }
 
-/*Time to finalise the cloud shape*/
+
 .cloud {
 	width: 200px; height: 60px;
 	background: #fff;
@@ -1548,24 +1559,24 @@ body::before {
 	top: -55px; left: auto; right: 15px;
 }
 
-/*Time to animate*/
+
 .x1 {
 	-webkit-animation: moveclouds 15s linear infinite;
 	-moz-animation: moveclouds 15s linear infinite;
 	-o-animation: moveclouds 15s linear infinite;
 }
 
-/*variable speed, opacity, and position of clouds for realistic effect*/
+
 .x2 {
 	left: 200px;
 	
 	-webkit-transform: scale(0.6);
 	-moz-transform: scale(0.6);
 	transform: scale(0.6);
-	opacity: 0.6; /*opacity proportional to the size*/
+	opacity: 0.6;
 	
-	/*Speed will also be proportional to the size and opacity*/
-	/*More the speed. Less the time in 's' = seconds*/
+
+
 	-webkit-animation: moveclouds 25s linear infinite;
 	-moz-animation: moveclouds 25s linear infinite;
 	-o-animation: moveclouds 25s linear infinite;
@@ -1577,7 +1588,7 @@ body::before {
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
+	opacity: 0.8;
 	
 	-webkit-animation: moveclouds 20s linear infinite;
 	-moz-animation: moveclouds 20s linear infinite;
@@ -1590,7 +1601,7 @@ body::before {
 	-webkit-transform: scale(0.75);
 	-moz-transform: scale(0.75);
 	transform: scale(0.75);
-	opacity: 0.75; /*opacity proportional to the size*/
+	opacity: 0.75;
 	
 	-webkit-animation: moveclouds 18s linear infinite;
 	-moz-animation: moveclouds 18s linear infinite;
@@ -1603,7 +1614,7 @@ body::before {
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
+	opacity: 0.8;
 	
 	-webkit-animation: moveclouds 20s linear infinite;
 	-moz-animation: moveclouds 20s linear infinite;
@@ -1761,7 +1772,7 @@ top: 20px;
   
 }
 
-/* Sleeping zzz animation */
+
 .sleeping-zzz {
   position: absolute;
   top: 20px;
@@ -1818,7 +1829,7 @@ top: 20px;
   }
 }
 
-/* Optional: Add a subtle head bob animation for the sleeping person */
+
 
 
 .person .sleep-head {
@@ -1844,13 +1855,13 @@ top: 20px;
   z-index:2;
 }
 
-/* Head animation - normal when awake, head-bob when sleeping */
+
 .person .head {
   animation: head-bob-sleep 10s infinite ease-in-out;
   position: relative;
 }
 
-/* Zzz animation visibility */
+
 .sleeping-zzz {
   animation: zzz-visibility 10s infinite ease-in-out;
 }
